@@ -6,6 +6,8 @@ $config = ['settings' => [
 
 //Add require for autoload
 require '../vendor/autoload.php';
+//Add require for db config
+require '../src/config/db.php';
 
 $app = new \Slim\App($config);
 
@@ -15,7 +17,7 @@ $app->get('/hello/{name}', function ($request, $response, $args) {
 });
 
 // Customer routes
-require '../src/customers.php';
+require '../src/routes/customers.php';
 
 
 // Run app
